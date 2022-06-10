@@ -66,17 +66,21 @@ class Dragon
     @is_hungry = true
   end
 
-  def eat
-    @is_hungry = false
+  def eat(x)
+    x = eat(x)
+    if x >= 4
+    then @is_hungry = false
   end
-
 end
+end
+
 
 
 d1 = Dragon.new("ricky", "julian", "black")
 p d1
 
-d1.eat
+d1.eat(4)
+
 
 p d1
 
@@ -89,3 +93,16 @@ p d1
 #  it should have an is_adult attribute (boolean) that is false by default. once a Hobbit is 33, it should be an adult
 #  it should have an is_old attribute that defaults to false. once a Hobbit is 101, it is old.
 #  it should have a has_ring attribute. If the Hobbit's name is "Frodo", true, if not, false.
+
+# class Hobbit
+#   def initialize(name, disposition)
+#     @name = name
+#     @disposition = disposition
+#     @age = 0
+#     @is_adult = false
+#     @is_old = false
+#     @has_ring = false
+#   end
+#
+# h1 = Hobbit.new("Bilbo", "happy")
+# p d1

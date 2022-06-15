@@ -106,15 +106,24 @@ class Hobbit
   end
 end
 
+def celebrate_birthday(newage)
+  @age = @age + 1
 
-def celebrate_birthday(agenew)
-  @age = @age + 1,
-  
+  if @age >= 33;
+    @is_adult = true
+  end
+
+  if @age >= 101;
+    @is_old = true
+  end
+end
+
+def has_ring
+if @name == "Frodo"
+  then @has_ring = true
+end
 end
 
 h1 = Hobbit.new("Bilbo", "happy")
-p h1
-
-h1.celebrate_birthday
 
 p h1

@@ -56,33 +56,34 @@ end
 #  it should have a dynamic color attribute (string)
 #  it should have a is_hungry attribute that is true by default
 #  it should have a eat method. If the dragon eats 4 times, it is no longer hungry
-
-class Dragon
-
-  def initialize(name, rider, color)
-    @name = name
-    @rider = rider
-    @color = color
-    @is_hungry = true
-  end
-
-  def eat(x)
-    x = eat(x)
-    if x >= 4
-    then @is_hungry = false
-  end
-end
-end
-
-
-
-d1 = Dragon.new("ricky", "julian", "black")
-p d1
-
-d1.eat(4)
-
-
-p d1
+#
+# class Dragon
+#
+#   def initialize(name, rider, color)
+#     @name = name
+#     @rider = rider
+#     @color = color
+#     @is_hungry = true
+#   end
+#
+#   def eat(x)
+#     x = eat(x)
+#     if x >= 4
+#     then @is_hungry = false
+#   end
+# end
+# end
+#
+#
+#
+# d1 = Dragon.new("ricky", "julian", "black")
+# p d1
+#
+# d1.eat
+# d1.eat
+# d1.eat
+# d1.eat
+# p d1
 
 
 #  Write a Hobbit class
@@ -94,15 +95,26 @@ p d1
 #  it should have an is_old attribute that defaults to false. once a Hobbit is 101, it is old.
 #  it should have a has_ring attribute. If the Hobbit's name is "Frodo", true, if not, false.
 
-# class Hobbit
-#   def initialize(name, disposition)
-#     @name = name
-#     @disposition = disposition
-#     @age = 0
-#     @is_adult = false
-#     @is_old = false
-#     @has_ring = false
-#   end
-#
-# h1 = Hobbit.new("Bilbo", "happy")
-# p d1
+class Hobbit
+  def initialize(name, disposition)
+    @name = name
+    @disposition = disposition
+    @age = 0
+    @is_adult = false
+    @is_old = false
+    @has_ring = false
+  end
+end
+
+
+def celebrate_birthday(agenew)
+  @age = @age + 1,
+  
+end
+
+h1 = Hobbit.new("Bilbo", "happy")
+p h1
+
+h1.celebrate_birthday
+
+p h1
